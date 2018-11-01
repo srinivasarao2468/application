@@ -1,0 +1,8 @@
+---
+- hosts: tomcat
+  become: true
+  tasks:
+    - name: example copying file with owner and permissions
+      copy:
+        src: /tmp/artifact/myweb-0.15.0.war
+        dest: /opt/tomcat8/myweb-0.15.0.war
